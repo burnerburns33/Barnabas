@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About Me</title>
+  <script src="script.js"> </script>
+<style>
+  body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    height: 100%; /* Full height */
+    background: url('pexels-pixabay-33045.jpg') no-repeat center center fixed; 
+    background-size: cover;
+  }
+
+  body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5); 
+    z-index: 0;
+  }
+
+  header, .content {
+    position: relative;
+    z-index: 2; 
+  }
+
+  header {
+    background-color: gold (255, 255, 255, 0.8); 
+    padding: 20px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .menu {
+    font-size: 50px;
+    color: white;
+    cursor: pointer;
+  }
+
+  .hamburger-icon {
+    width: 45px;
+    height: 45px;
+    background: transparent;
+    border: none;
+    padding: 0;
+  }
+
+  .hamburger-icon span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background: black;
+    margin: 6px auto;
+    transition: all 0.3s ease-in-out;
+  }
+
+  .nav-links {
+    position: absolute;
+    right: 0;
+    top: 60px;
+    height: 100vh;
+    width: 0;
+    background: rgba(0, 0, 0, 0.9);
+    overflow: hidden;
+    transition: width 0.5s;
+    padding-top: 20px;
+    text-align: left;
+    z-index: 999;
+  }
+
+  .nav-links a {
+    padding: 10px 15px;
+    text-decoration: none;
+    font-size: 20px;
+    color: white;
+    display: block;
+    transition: 0.3s;
+  }
+
+  .nav-links a:hover {
+    background: red;
+    color: black;
+  }
+
+  .content {
+    display: flex;
+    margin: 50px;
+    z-index: 0;
+    align-items: flex-start;
+  }
+
+  .left-column {
+    flex: 2;
+    margin-right: 20px;
+  }
+
+  .left-column img {
+    width: 100%;
+    border-radius: 10px;
+  }
+
+  .right-column {
+    flex: 3;
+    font-size: 20px;
+    color: white; 
+  }
+
+  .right-column h1, .right-column h2, .right-column h3, .right-column h4 {
+    color: white;
+    font-weight: bold; 
+  }
+
+</style>
+<script>
+  function toggleMenu() {
+    var nav = document.querySelector('.nav-links');
+    if (nav.style.width === '250px') {
+      nav.style.width = '0';
+    } else {
+      nav.style.width = '250px'; 
+    }
+  }
+
+</script>
+</head>
+<body>
+<header>
+  <div style="font-size: 24px; font-weight: bold;">ABOUT ME</div>
+  <button class="menu" onclick="toggleMenu()">
+    <div class="hamburger-icon">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </button>
+  <div class="nav-links">
+    <a href="Barnabas.html">Home</a>
+    <a href="about.html">About Me</a>
+    <a href="VPN Info Essay.html">VPN Info Essay</a>
+  </div>
+</header>
+<div class="content">
+  <div class="left-column">
+    <img src="IMG_0692.JPG" alt="Barnabas Berhanu">
+  </div>
+  <div class="right-column">
+    <h1>I'm Barnabas, a CNSA student at Thaddeus Stevens College of Technology.</h1>
+    <h2>I'm from Ethiopia, Africa. I love the opportunity that this education provides.</h2>
+    <h3>My goal is to start an IT networking business that focuses on building robust and efficient networks in Ethiopia.</h3>
+    <h4>You'll find me dreaming of soccer, playing piano, and spending time with family back home.</h4>
+    <h5>Contact Info</h5>
+    <p> Email: barnabasberhanu365@gmail.com</p>
+    <p> Mobile number: 717-847-1410</p>
+  </div>
+</div>
+</body>
+</html>

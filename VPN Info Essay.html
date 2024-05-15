@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VPN Essay</title>
+  <link href="style.css" rel="stylesheet">
+  <style>
+    body, html {
+      height: 100%;
+      margin: 0;
+      font-family: 'Nunito', sans-serif;
+      background-image: url('depositphotos_67162701-stock-photo-huts-in-a-hamer-village.jpg'); 
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+      position: relative;
+      color: #333;
+    }
+
+    body::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(0, 0, 0, 0.5);
+    }
+
+    .menu {
+      position: absolute;
+      top: 20px;
+      right: 30px;
+      font-size: 50px;
+      color: white;
+      cursor: pointer;
+      z-index: 1000;
+    }
+
+    .hamburger-icon {
+      width: 45px;
+      height: 45px;
+      background: transparent;
+      border: none;
+      padding: 0;
+    }
+
+    .hamburger-icon span {
+      display: block;
+      width: 25px;
+      height: 3px;
+      background: white;
+      margin: 6px auto;
+      transition: all 0.3s ease-in-out;
+    }
+
+    .hamburger-icon.active span:nth-child(1) {
+      transform: rotate(135deg) translate(5px, 5px);
+    }
+
+    .hamburger-icon.active span:nth-child(2) {
+      opacity: 0;
+    }
+
+    .hamburger-icon.active span:nth-child(3) {
+      transform: rotate(-135deg) translate(5px, -5px);
+    }
+
+    .nav-links {
+      position: fixed;
+      right: 0;
+      top: 0;
+      height: 100%;
+      width: 0;
+      background: rgba(0, 0, 0, 0.9);
+      overflow: hidden;
+      transition: width 0.5s;
+      padding-top: 60px;
+      text-align: left;
+      z-index: 999;
+    }
+
+    .nav-links a {
+      padding: 10px 15px;
+      text-decoration: none;
+      font-size: 20px;
+      color: white;
+      display: block;
+      transition: 0.3s;
+    }
+
+    .nav-links a:hover {
+      background: red;
+      color: black;
+    }
+
+    .content-container {
+      position: relative;
+      padding: 20px;
+      background: rgba(255, 255, 255, 0.8);
+      margin-top: 80px;
+      border-radius: 15px;
+      font-size: 16px;
+    }
+  </style>
+  <script>
+    function toggleMenu() {
+      var nav = document.querySelector('.nav-links');
+      nav.style.width = nav.style.width === '250px' ? '0' : '250px';
+      document.querySelector('.hamburger-icon').classList.toggle('active');
+    }
+  </script>
+</head>
+<body>
+  <div class="menu" onclick="toggleMenu()">
+    <button class="hamburger-icon">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+  </div>
+    <div class="nav-links">
+      <a href="Home.html">Home</a>
+      <a href="about.html">About Me</a>
+      <a href="VPN Info Essay.html">VPN Info Essay</a>
+    </div>
+
+  <div class="content-container">>
+    <h1><center>VPN Essay </center></h1>
+    <h2><center>Table of contents</center>
+      <ol style="text-align: center; list-style-position: inside;">
+          <li><a href="Introduction.html">Introduction</a></li>
+          <li><a href="What is a VPN.html">What is a VPN</a></li>
+          <li><a href="Setting up a vpn.html">Setting up a VPN</a></li>
+          <li><a href="Protocols.html">Protocols</a></li>
+          <li><a href="How it works.html">How it works</a></li>
+          <li><a href="Setting up a vpn.html">How to setup a VPN</a></li>
+          <li><a href="Advantages and disadvatges of VPN.html">Advantages and disadvantages of VPN</a></li>   
+          <li><a href="Conclusion.html">Conclusion</a></li>
+   </ol>
+  </div>
+</body>
+
+</html>

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VPN Protocols</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background: url('pexels-davidmceachan-71241.jpg') no-repeat center center fixed;
+            background-size: cover;
+            color: #ffffff;
+        }
+        .container {
+            background-color: rgba(0, 0, 0, 0.85);
+            margin: 50px auto;
+            padding: 20px;
+            max-width: 800px;
+            border-radius: 10px;
+        }
+        h1 {
+            text-align: center;
+            color: #ffffff;
+            font-weight: bold;
+        }
+        ul {
+            list-style-type: disc;
+            margin-left: 40px;
+        }
+        ul ul {
+            list-style-type: circle;
+        }
+        .image-container {
+            text-align: center;
+            margin: 20px 0;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+        .back-to-contents {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .back-to-contents a {
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: bold;
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 10px 20px;
+            border-radius: 5px;
+            display: inline-block;
+        }
+        .back-to-contents a:hover {
+            background-color: rgba(0, 0, 0, 0.7);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>VPN Protocols</h1>
+        <div class="image-container">
+    
+        </div>
+        <p>Tunnels are a core crucial part of VPN; they serve as the foundation for VPN. These tunnels are based on the following protocols:</p>
+        <ul>
+            <li><strong>L2LTP</strong>
+                <ul>
+                    <li>Installed with TCP/IP, both the VPN client and the server are required. L2TP has encryption services using IPsec.</li>
+                </ul>
+            </li>
+            <li><strong>PPTP</strong>
+                <ul>
+                    <li>The VPN Server allows two interfaces, one on the internet and the other on a private network. This allows the IP header to be encrypted and sent to the internet.</li>
+                </ul>
+            </li>
+            <li><strong>SSTP</strong>
+                <ul>
+                    <li>An unusual tunneling protocol that uses the HTTPS protocol on TCP port to send traffic around firewalls that can block PPTP. The SSL channel of the HTTPS protocol is used to encrypt this message.</li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+    <div class="back-to-contents">
+        <a href="VPN Info Essay.html">Back to Table of Contents</a>
+    </div>
+</body>
+</html>
