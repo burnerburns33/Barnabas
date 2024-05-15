@@ -3,48 +3,41 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>About Me</title>
-  <script src="script.js"> </script>
+<title>VPN Project</title>
+<script src="script.js"> </script>
 <style>
   body, html {
+    height: 100%;
     margin: 0;
-    padding: 0;
     font-family: Arial, sans-serif;
-    height: 100%; /* Full height */
-    background: url('pexels-pixabay-33045.jpg') no-repeat center center fixed; 
+    overflow-x: hidden;
+  }
+  .bg video {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -100;
     background-size: cover;
   }
 
-  body::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(0, 0, 0, 0.5); 
-    z-index: 0;
-  }
-
-  header, .content {
+  .bg {
     position: relative;
-    z-index: 2; 
-  }
-
-  header {
-    background-color: gold (255, 255, 255, 0.8); 
-    padding: 20px 40px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    height: 100%;
+    overflow: hidden;
   }
 
   .menu {
+    position: absolute;
+    top: 20px;
+    right: 30px;
     font-size: 50px;
     color: white;
     cursor: pointer;
   }
-
   .hamburger-icon {
     width: 45px;
     height: 45px;
@@ -52,30 +45,26 @@
     border: none;
     padding: 0;
   }
-
   .hamburger-icon span {
     display: block;
     width: 25px;
     height: 3px;
-    background: black;
+    background: white;
     margin: 6px auto;
     transition: all 0.3s ease-in-out;
   }
-
   .nav-links {
     position: absolute;
     right: 0;
-    top: 60px;
-    height: 100vh;
+    top: 0;
+    height: 100%;
     width: 0;
     background: rgba(0, 0, 0, 0.9);
     overflow: hidden;
     transition: width 0.5s;
-    padding-top: 20px;
+    padding-top: 60px;
     text-align: left;
-    z-index: 999;
   }
-
   .nav-links a {
     padding: 10px 15px;
     text-decoration: none;
@@ -84,82 +73,50 @@
     display: block;
     transition: 0.3s;
   }
-
   .nav-links a:hover {
     background: red;
     color: black;
   }
 
-  .content {
-    display: flex;
-    margin: 50px;
-    z-index: 0;
-    align-items: flex-start;
+  .personal-info {
+    position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);
+    text-align: center; color: white; z-index: 100; font-size: 24px;
   }
-
-  .left-column {
-    flex: 2;
-    margin-right: 20px;
-  }
-
-  .left-column img {
-    width: 100%;
-    border-radius: 10px;
-  }
-
-  .right-column {
-    flex: 3;
-    font-size: 20px;
-    color: white; 
-  }
-
-  .right-column h1, .right-column h2, .right-column h3, .right-column h4 {
-    color: white;
-    font-weight: bold; 
-  }
-
 </style>
-<script>
-  function toggleMenu() {
-    var nav = document.querySelector('.nav-links');
-    if (nav.style.width === '250px') {
-      nav.style.width = '0';
-    } else {
-      nav.style.width = '250px'; 
-    }
-  }
-
-</script>
 </head>
 <body>
-<header>
-  <div style="font-size: 24px; font-weight: bold;">ABOUT ME</div>
-  <button class="menu" onclick="toggleMenu()">
-    <div class="hamburger-icon">
-      <span></span>
-      <span></span>
-      <span></span>
+  <div class="bg">
+    <video autoplay loop muted playsinline>
+      <source src="1851190-hd_1280_720_25fps.mp4" type="video/mp4">
+      Your browser does not support HTML5 video.
+    </video>
+    <div class="menu" onclick="toggleMenu()">
+      <button class="hamburger-icon">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
     </div>
-  </button>
-  <div class="nav-links">
-    <a href="Barnabas.html">Home</a>
-    <a href="about.html">About Me</a>
-    <a href="VPN Info Essay.html">VPN Info Essay</a>
+    <div class="nav-links">
+      <a href="Home.html">Home</a>
+      <a href="about.html">About Me</a>
+      <a href="VPN Info Essay.html">VPN Info Essay</a>
+    </div>
+    <div class="personal-info">
+    <h1>Barnabas Berhanu </h1>
+      <p>Aspiring Network Administrator</p>
+    </div>
   </div>
-</header>
-<div class="content">
-  <div class="left-column">
-    <img src="IMG_0692.JPG" alt="Barnabas Berhanu">
-  </div>
-  <div class="right-column">
-    <h1>I'm Barnabas, a CNSA student at Thaddeus Stevens College of Technology.</h1>
-    <h2>I'm from Ethiopia, Africa. I love the opportunity that this education provides.</h2>
-    <h3>My goal is to start an IT networking business that focuses on building robust and efficient networks in Ethiopia.</h3>
-    <h4>You'll find me dreaming of soccer, playing piano, and spending time with family back home.</h4>
-    <h5>Contact Info</h5>
-    <p> Email: barnabasberhanu365@gmail.com</p>
-    <p> Mobile number: 717-847-1410</p>
-  </div>
-</div>
+  <audio controls autoplay loop>
+
+    <source src="a-space-journey-through-the-solar-system-153272.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+  <script>
+    function toggleMenu() {
+      var nav = document.querySelector('.nav-links');
+      nav.style.width = nav.style.width === '250px' ? '0' : '250px';
+    }
+  </script>
 </body>
 </html>
